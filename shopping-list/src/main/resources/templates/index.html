@@ -34,6 +34,11 @@
 </nav>
 
 <div class="container">
+
+<!--    <td>-->
+<!--        <span sec:authorize="hasRole('ADMIN')">Изменить товар</span>-->
+<!--        <span sec:authorize="hasRole('USER')">Описание товара</span>-->
+<!--    </td>-->
     <form method="post" th:action="@{/}" th:object="${item}">
         <div class="input-group mb-3 mt-3">
             <input type="text" th:field="*{name}" class="form-control" placeholder="Название новой покупки"

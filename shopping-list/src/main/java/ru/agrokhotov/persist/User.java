@@ -23,7 +23,13 @@ public class User {
             mappedBy = "user"
     )
 
+
     private List<ShoppingItem> shoppingItems;
+
+    @OneToMany(mappedBy = "user",
+            cascade = CascadeType.ALL, //удаление ролей каскадом вслед за удалением пользователя
+            orphanRemoval = true) //удаление ролей не привязанных ни к одному пользователю
+    private List<Authority> authorities;
 
     public User() {
     }
