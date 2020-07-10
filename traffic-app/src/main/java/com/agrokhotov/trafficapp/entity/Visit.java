@@ -27,6 +27,13 @@ public class Visit {
     public Visit() {
     }
 
+    public Visit(Long userId, Long pageId, Date date, String session) {
+        this.userId = userId;
+        this.pageId = pageId;
+        this.date = date;
+        this.session = session;
+    }
+
     public Long getId() {
         return id;
     }
