@@ -6,9 +6,6 @@ import org.springframework.stereotype.Service;
 
 import java.sql.Date;
 
-/**
- * Common interface for traffic service
- */
 @Service
 public interface TrafficService {
 

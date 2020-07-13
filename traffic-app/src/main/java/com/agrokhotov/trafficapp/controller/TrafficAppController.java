@@ -29,15 +29,11 @@ public class TrafficAppController {
                                                 @RequestParam(name = "page_id") Long page_id,
                                                 HttpServletRequest request) {
         HttpSession session = request.getSession();
-        System.out.println("chp 1");
         session.setMaxInactiveInterval(60 * 60 * 24 * 365);
         trafficService.createVisit(new Visit(id, page_id, Date.valueOf(LocalDate.now()), session.getId()));
-        System.out.println("chp 2");
         List<Answer> answers = new ArrayList<>();
         answers.add(trafficService.countVisitsForToday());
-        System.out.println("chp 3");
         answers.add(trafficService.countUniqueVisitsForToday());
-        System.out.println("chp 4");
         return answers;
     }
 

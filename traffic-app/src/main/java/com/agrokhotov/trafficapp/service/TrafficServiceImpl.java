@@ -9,9 +9,6 @@ import org.springframework.stereotype.Service;
 import java.sql.Date;
 import java.time.LocalDate;
 
-/**
- * Implementation of TrafficService interface
- */
 @Service
 public class TrafficServiceImpl implements TrafficService {
 
