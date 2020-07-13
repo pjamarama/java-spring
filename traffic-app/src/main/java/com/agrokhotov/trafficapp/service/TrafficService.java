@@ -18,9 +18,9 @@ public interface TrafficService {
 
     Answer countUniqueVisitsForToday();
 
-    Answer countPeriodVisits(Date from, Date to);
+    Answer countVisitsForPeriod(Date from, Date to);
 
-    Answer countPeriodUniqueVisits(Date from, Date to);
+    Answer countUniqueVisitsForPeriod(Date from, Date to);
 
-    Answer countPeriodRegularUsers(Date from, Date to);
+    Answer countRegularUsersForPeriod(Date from, Date to);
 }

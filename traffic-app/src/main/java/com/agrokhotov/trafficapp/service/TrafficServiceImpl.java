@@ -39,18 +39,18 @@ public class TrafficServiceImpl implements TrafficService {
     }
 
     @Override
-    public Answer countPeriodVisits(Date from, Date to) {
+    public Answer countVisitsForPeriod(Date from, Date to) {
         return new Answer("Visit count for the given period", visitRepository.countAllByDateBetween(from, to));
     }
 
     @Override
-    public Answer countPeriodUniqueVisits(Date from, Date to) {
+    public Answer countUniqueVisitsForPeriod(Date from, Date to) {
         return new Answer("Unique visit count for the given period",
                 visitRepository.countAllByDateBetweenAndDistinctSession(from, to));
     }
 
     @Override
-    public Answer countPeriodRegularUsers(Date from, Date to) {
+    public Answer countRegularUsersForPeriod(Date from, Date to) {
         Long count = visitRepository.countAllRegularUsers(from, to);
         if (count == null) {
             count = 0L;

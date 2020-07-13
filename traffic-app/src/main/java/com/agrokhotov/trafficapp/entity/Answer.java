@@ -3,15 +3,15 @@ package com.agrokhotov.trafficapp.entity;
 public class Answer {
 
     private String description;
-    private Long counter;
+    private Long visitCounter;
 
-    public Answer(String description, Long counter) {
-        this.counter = counter;
+    public Answer(String description, Long visitCounter) {
+        this.visitCounter = visitCounter;
         this.description = description;
     }
 
-    public Long getCounter() {
-        return counter;
+    public Long getVisitCounter() {
+        return visitCounter;
     }
 
     public String getDescription() {
@@ -22,7 +22,7 @@ public class Answer {
     public String toString() {
         return "Answer{" +
                 "description='" + description + '\'' +
-                ", counter=" + counter +
+                ", counter=" + visitCounter +
                 '}';
     }
 }
